@@ -470,7 +470,6 @@ font-family: "Lavishly Yours", cursive;
 
 
 /*ANIMACION*/
-
 #intro {
   position: fixed;
   inset: 0;
@@ -483,10 +482,14 @@ font-family: "Lavishly Yours", cursive;
   gap: 1rem;
   height: 100%;
   z-index: 1000;
-
+  
   /* IMPORTANTE: visible desde el inicio */
   opacity: 1;
   will-change: opacity, filter;
+
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 #intro.fade-out {

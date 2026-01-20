@@ -1,10 +1,15 @@
 const intro = document.getElementById("intro");
 const enterBtn = document.getElementById("enterBtn");
+const footer = document.querySelector(".footer-countdown");
 
 enterBtn.addEventListener("click", () => {
   window.scrollTo({top: 0, behavior: "instant"});
   intro.classList.add("fade-out");
 
+  footer.style.opacity = "1";
+  footer.style.visibility = "visible";
+  footer.style.pointerEvents = "auto";
+  
   // Eliminar el intro después de la animación
   setTimeout(() => {
     intro.remove();
@@ -13,12 +18,19 @@ enterBtn.addEventListener("click", () => {
     elementos.forEach((el, index) => {
       setTimeout(() => {
         el.classList.add("activo");
-      }, index * 300); // controla la velocidad entre apariciones
+      }, index * 300); 
     });
-  }, 800); // debe coincidir con la duración del CSS
+
+    document.querySelector(".timeline").classList.add("activo");
+    timeline.classList.add("activo");
+events.forEach(event => observer.observe(event));
+  }, 800); 
 });
 
-const targetDate = new Date("2026-03-08T16:30:00").getTime();
+
+
+
+const targetDate = new Date("2026-03-08T15:30:00").getTime();
 
   function updateCountdown() {
     const now = new Date().getTime();
@@ -44,7 +56,22 @@ const targetDate = new Date("2026-03-08T16:30:00").getTime();
     setInterval(updateCountdown, 1000);
 
 
+const events = document.querySelectorAll(".event");
 
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  },
+  {
+    threshold: 0.3
+  }
+);
+
+const timeline = document.querySelector(".timeline");
 
 
 

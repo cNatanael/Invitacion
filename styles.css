@@ -1,19 +1,17 @@
 .fram {
   width: 100%;
   aspect-ratio: 3/11;
-  overflow: hidden;
+    clip-path: inset(0 0 10.5% 0);
 }
 
 
-.body{
-    background-color: #fdf2e6;
-}
+
 .contenedorp {
   position: relative;
   /* referencia */
   width: 100%;
   aspect-ratio: 3 / 20;
-  top: 3rem;
+  top: 5%;
   overflow: hidden;
 
 }
@@ -209,13 +207,15 @@ body {
 
 .giffo{
     width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 2%;
+  aspect-ratio: 1/1;
+  z-index: 200;
+  position: absolute;
+  top: 101%;
 
 }
-.giffo img{ 
+.giffo video{ 
   width: 100%;
+  margin-top: -100%;
 }
 .Descripnom {
   color: #fff;
@@ -1225,7 +1225,7 @@ button {
   text-decoration: none;
   background: #000;
   color: #fff;
-  padding: 0.4VW 2VW;
+  padding:1VW 3VW;
   border-radius: 999px;
   font-size: 4vw;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1345,6 +1345,7 @@ button {
   font-style: normal;
   font-weight: 100;
   line-height: 1;
+  margin-top: -60%;
 }
 
 
@@ -1427,7 +1428,7 @@ button {
   display: flex;
   justify-content: center; /* centrar fila */
   align-items: center;     /* centrar vertical */
-  gap: 20px;               /* espacio entre círculos */
+  gap: 15%;             /* espacio entre círculos */
 }
 
 .circulo {
@@ -1533,7 +1534,7 @@ button {
   width: 100%;
   margin: auto;
   margin-top: -15%;
-  margin-bottom: -10%;
+  z-index: 43143242;
 }
 
 .frase p{
@@ -1544,14 +1545,17 @@ button {
   font-family: cursive;
 }
 
-
+.textoo{
+  position: absolute;
+  top: 55%;
+}
 
 .flor7{
   width: 25%;
   aspect-ratio: 1/1;
   position: absolute;
   left: 68%;
-  top: 217.9%;
+  top: 60%;
   z-index: 200;
 }
 .flor7 img{
@@ -1566,7 +1570,7 @@ button {
   aspect-ratio: 1/1;
   position: absolute;
   left: 1%;
-  top: 164%;
+  top: -40%;
   z-index: 200;
 }
 .flor8 img{
@@ -1575,3 +1579,4 @@ button {
    transform: rotate(25deg);
   
 }
+

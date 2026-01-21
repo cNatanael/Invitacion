@@ -206,16 +206,19 @@ body {
 
 
 .giffo{
-    width: 100%;
-  aspect-ratio: 1/1;
-  z-index: 200;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   position: absolute;
-  top: 101%;
+  top: 53.2%;
+  z-index: 200;
 
 }
 .giffo video{ 
-  width: 100%;
-  margin-top: -100%;
+ width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: translateZ(0);
 }
 .Descripnom {
   color: #fff;
@@ -343,7 +346,12 @@ z-index: 782888;
 
 
 .xombra{
-  filter: drop-shadow(6vw 5vw 6vw rgba(0,0,0,.35));
+  filter: drop-shadow(24px 24px 40px rgba(0,0,0,.35));
+
+  /* Safari fixes */
+  transform: translateZ(0);
+  will-change: filter;
+  backface-visibility: hidden;
 }
 
 

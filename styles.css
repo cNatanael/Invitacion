@@ -1001,7 +1001,7 @@ button {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  border-left: 0.6VW dashed #9aa6a0;
+  border-left: 2px dashed #9aa6a0;
 }
 
 .itinerario-item {

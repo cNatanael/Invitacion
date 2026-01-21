@@ -638,7 +638,6 @@ img {
 
 
 /*Fechaa*/
-
 .fechagrande{
   display: flex;
   align-items: center;
@@ -651,8 +650,8 @@ font-family: 'Times New Roman', Times, serif;
 .fechagrande B{
   font-size: 12vw;
   font-family: "Kapakana", cursive;
-  margin-bottom: 0;
-  line-height: 0;
+
+  font-weight: 800;
 }
 .bordes{
   font-size: 19vw;
@@ -660,7 +659,6 @@ font-family: 'Times New Roman', Times, serif;
   text-align: center;
     font-family: "Kapakana", cursive;
   margin-bottom:12VW;
-  line-height: 0;
 
   }
 .annn{

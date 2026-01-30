@@ -326,8 +326,13 @@ function abrirEnlace(index) {
 }
 
 function copiarEnlace(index) {
-    const data = JSON.parse(localStorage.getItem("invitados"));
-    const url = data[index].enlace;
+    const data = JSON.parse(localStorage.getItem("invitados")) || datosIniciales;
+    let url = (data[index].enlace || "").trim();
+
+    // Si el enlace es relativo (ej: "1.html"), convertirlo a URL completa
+    if (url && !url.startsWith("http://") && !url.startsWith("https://")) {
+        url = new URL(url, window.location.href).href;
+    }
 
     if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(url);
@@ -339,8 +344,10 @@ function copiarEnlace(index) {
         document.execCommand("copy");
         document.body.removeChild(input);
     }
-    alert("Enlace copiado ✔️");
+
+    alert("Enlace copiado ✔️\n" + url);
 }
+
 
 function aplicarFiltro() {
     const filtro = document.getElementById("filtro").value;
@@ -362,3 +369,4 @@ cargarDatos();
 
 </body>
 </html>
+
